@@ -1,0 +1,820 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf');
+  src: url('webfont.eot');
+  /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+  url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+  url('webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('webfont.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'SportsWorld';
+  src: url('../fonts/Sports-World-Regular.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+nav {
+  display: inline;
+}
+
+.navbar {
+  background-color: #222;
+  color: #d8d4c9;
+  font-size: 20px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  z-index: 10;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+}
+
+.navbar-items {
+  padding: 9.8%;
+  color: #d8d4c9;
+  text-decoration: none;
+  display: inline;
+  height: auto;
+}
+
+.navbar-items a {
+  color: #c0c0c0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.navbar-items a:hover {
+  color: #fff;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  /* Safari 3.1 to 6.0 */
+}
+
+div.brand {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+div.brand a {
+  display: inline;
+  font-size: 25px;
+  font-family: 'SportsWorld';
+  color: #f9c118;
+  letter-spacing: 3px;
+  font-weight: 900;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  /* Safari 3.1 to 6.0 */
+}
+
+#brend {
+  font-size: 40px;
+}
+
+.nav-items {
+  display: inline-block;
+}
+
+.list-items li {
+  list-style: none;
+  display: inline;
+  margin-right: 40px;
+  font-weight: 500;
+}
+
+.kartica {
+  float: left;
+  width: 33%;
+  height: 450px;
+  display: inline-block;
+}
+
+.kartica:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.kartica p {
+  margin: 50px 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+.opis {
+  text-align: left;
+  color: #fff;
+  position: relative;
+  top: -50px;
+}
+
+#usluge {
+  opacity: 0;
+}
+
+.container {
+  position: relative;
+  top: 60px;
+  background-color: #222;
+  width: 73%;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5%;
+  min-height: auto;
+  border-radius: 6px;
+}
+
+.odeljak {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sadrzaj {
+  border-top: solid 2px #f9c118;
+  border-bottom: solid 2px #f9c118;
+  height: auto;
+  text-align: center;
+  display: none;
+}
+
+h1, h2, h3 {
+  color: #f9c118;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */
+  cursor: default;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.naslov {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#naslov {
+  line-height: 60px;
+  padding-top: 25px;
+}
+
+p {
+  margin: 50px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                          supported by Chrome and Opera */
+  cursor: default;
+}
+
+.sadrzaj p {
+  text-align: center;
+  justify-content: center;
+}
+
+h3 p {
+  color: #f9c118;
+  font-size: 30px;
+}
+
+.slike {
+  text-align: center;
+  margin-top: 20px;
+  height: auto;
+}
+
+figure {
+  display: inline-block;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+figcaption {
+  position: relative;
+  top: -50px;
+  color: #fff;
+  font-size: 35px;
+  padding: 5px 0 10px 0;
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0.7;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  display: inline;
+  filter: grayscale(100%);
+  border-radius: 3px;
+}
+
+img:hover {
+  filter: none;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  /* Safari 3.1 to 6.0 */
+}
+
+.kontakt {
+  margin-right: 4%;
+  width: 29%;
+  margin-top: 80px;
+}
+
+.kontakt:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#info {
+  clear: both;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+tr {
+  vertical-align: top;
+}
+
+.labela {
+  font-size: 20px;
+  margin-right: 20px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  text-align: right;
+  display: inline;
+}
+
+.forma {
+  text-align: center;
+}
+
+.forma input {
+  border: none;
+  border: solid 1px #fff;
+  background-color: #222;
+  color: #f9c118;
+  border-radius: 3px;
+  height: 35px;
+  font-size: 20px;
+  padding: 4px;
+}
+
+.forma input[type="text"]:focus, .forma textarea:focus {
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.175) inset, 0 0 8px rgba(229, 103, 23, 0.8);
+  outline: 0 none;
+  border: solid 1px #f9c118;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  /* Safari 3.1 to 6.0 */
+}
+
+.greska {
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(255, 38, 0, 1);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(255, 38, 0, 1);
+  box-shadow: 0px 0px 0px 3px rgba(255, 38, 0, 1);
+  border: solid 2px #f00;
+  outline: 0 none;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+div.error span {
+  color: #f9c118;
+  font-family: 'Roboto', sans-serif;
+}
+
+.forma>div.error span {
+  text-align: left;
+}
+
+td {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  text-align: right;
+}
+
+textarea {
+  background-color: #222;
+  border: solid 1px #fff;
+  color: #f9c118;
+  border-radius: 3px;
+  height: 90px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  padding: 4px;
+}
+
+.forma input[type="submit"].btn {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+  height: auto;
+  width: auto;
+  font-size: 18px;
+  background-color: #222;
+  color: #f9c118;
+  border: solid 2px #f9c118;
+  padding: 9px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.forma input[type="submit"].btn:hover {
+  cursor: pointer;
+  color: #d8d4c9;
+  border-color: #d8d4c9;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.kontaktInfo td {
+  text-align: left;
+  margin-right: 20px;
+  padding-bottom: 15px;
+}
+
+.razmak {
+  padding-left: 10px;
+}
+
+div#mapa div {
+  margin-top: 20px;
+}
+
+.kontakt h3, div#mapa h3 {
+  display: inline-block;
+}
+
+div#kontaktinfo, #mapa {
+  display: inline-block;
+  float: left;
+}
+
+div#kontaktinfo table tbody tr td:first-child {
+  font-weight: 700;
+  color: #f9c118;
+}
+
+div#kontaktinfo table tbody tr td:nth-child(2) {
+  font-weight: 700;
+}
+
+div#mapa {
+  width: 63%;
+}
+
+iframe {
+  margin-top: 40px;
+}
+
+div#kontaktMejl {
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  padding-top: 80px;
+  width: 600px;
+}
+
+div#kontaktMejl h3 {
+  display: block;
+  text-align: center;
+}
+
+div#kontaktMejl form {
+  width: 100%;
+  margin-top: 40px;
+}
+
+div#kontaktMejl form label.labela {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+div#kontaktMejl form input[type="text"] {
+  width: 100%;
+}
+
+div#kontaktMejl form textarea {
+  width: 100%;
+}
+
+div#kontaktMejl form input.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width:1440px) {
+  figure#slika1 figcaption {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width:1291px) {
+  h3 p {
+      font-size: 25px;
+  }
+}
+
+@media screen and (max-width:1150px) {
+  figure#slika1 figcaption {
+    font-size: 22px;
+  }
+  div#kontaktinfo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  div#kontaktinfo h3 {
+    display: block;
+    text-align: center;
+  }
+  div#kontaktinfo table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  div#mapa {
+    margin-right: 0;
+    width: 100%;
+  }
+  div#mapa h3 {
+    display: block;
+    text-align: center;
+  }
+  div#mapa iframe {
+    width: 100%;
+  }
+  div#kontaktMejl {
+    padding-top: 40px;
+  }
+}
+
+
+@media screen and (max-width:1150px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+      font-size: 30px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1372px) {
+    
+  div#kontaktinfo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  div#kontaktinfo h3 {
+    display: block;
+    text-align: center;
+  }
+  
+  div#kontaktinfo table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  div#mapa {
+    margin-right: 0;
+    width: 100%;
+  }
+  div#mapa h3 {
+    display: block;
+    text-align: center;
+  }
+  
+  .razmak {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width:960px) {
+  .container {
+    width: 80%;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  .kartica {
+    display: block;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+  }
+  div.kartica figure {
+    width: 48%;
+    float: left;
+  }
+  figure figcaption {
+    display: inline-block;
+    width: 100%;
+  }
+  .kartica p {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:944px) {
+  figure#slika1 figcaption {
+    padding-bottom: 1px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:910px) {
+  .navbar-items {
+    padding: 4.8%;
+    font-size: 16px;
+    display: inline;
+    height: auto;
+  }
+  .list-items li {
+      margin-right: 20px;
+  }
+  .brand {
+      margin-right: 20px;
+  }
+  div.brand a {
+      font-size: 19px;
+  }
+}
+
+@media screen and (max-width:885px) {
+  .odeljak {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  figure#slika2 figcaption, figure#slika3 figcaption {
+    font-size: 23px;
+  }
+  div#kontaktMejl {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:885px) {
+  div.kartica figure#slika1+p, div.kartica figure#slika2+p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:775px) {
+  .kartica {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  div.kartica figure#slika3+p {
+    font-size: 22px;
+  }
+  div.kartica figure#slika1+p, div.kartica figure#slika2+p {
+    font-size: 20px;
+  }
+   
+  p {
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width:659px) {
+    div.container {
+        margin-top: 60px;
+    }
+    .list-items {
+        margin-top: 15px;
+        padding-left: 2.2%;
+    }
+}
+
+
+
+@media screen and (max-width:643px) {
+  div.kartica figure#slika1+p, div.kartica figure#slika2+p, div.kartica figure#slika3+p {
+    font-size: 16px;
+    padding: 0;
+  }
+  p {
+    font-size: 17px;
+  }
+  div.brand {
+      margin-right: 20px;
+  }
+}
+
+@media screen and (max-width:639px) {
+  /*div.kartica figure#slika1 + p, div.kartica figure#slika2 + p, div.kartica figure#slika3 + p{
+    font-size:16px;
+    padding:0;
+  }*/
+  div.kartica figure {
+    width: 100%;
+    display: block;
+    ;
+    float: none;
+  }
+  div.kartica figure#slika1+p, div.kartica figure#slika2+p, div.kartica figure#slika3+p {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .odeljak {
+    margin-bottom: 0;
+  }
+  #naslov {
+    padding-top: 0;
+  }
+  p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .razmak {
+    padding-left: 40px;
+  }
+  h1 {
+   font-size: 27px;
+  }
+  h2 {
+   font-size: 27px;
+  }
+  
+  h3 {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width:420px /*blaze it*/) {
+  h3 {
+    font-size: 27px;
+  }
+  div.kartica figure#slika1+p {
+    margin-top: 35px;
+  }
+  div.kartica figure#slika2+p, div.kartica figure#slika3+p {
+    margin-top: 25px;
+  }
+  #naslov {
+    line-height: 37px;
+    margin-bottom: 20px;
+  }
+  td {
+    font-size: 15px;
+  }
+  
+  .sadrzaj p {
+      justify-content: left;
+  }
+  
+  p {
+    font-size: 15px;
+    margin: 30px;
+  }
+  
+   .kontakt {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width:386px) {
+  td, .kontaktInfo td  {
+    text-align: center;      
+    display: block;
+  }
+  #naslov {
+    font-size: 27px;
+  }
+  
+  h3 {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width:316px) {
+    div.container {
+        margin-top: 71px;
+    }
+    .list-items li {
+      margin-right: 9px;
+    }
+}
+
+.errorMessage, .okMessage {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #333;
+}
+
+.errorMessage {
+  background-color: #c32;
+}
+
+.okMessage {
+  background-color: #2a3;
+}
+
+.errorMessage p, .okMessage p {
+  display: inline;
+  font-size: 16px;
+}
