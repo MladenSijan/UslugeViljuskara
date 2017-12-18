@@ -2,16 +2,17 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Usluge viljuškara | Zanatska radnja BD, Beograd</title>
-  <meta name="description" content="Zanatska radnja BD - Braća Dobrić. Pružamo sve usluge viljuškara. Naš kontakt telefon: 063/77-09-758. Nalazimo se na adresi Braće Novaković 78, u Surčinu">
+
+  <title>Usluge viljuškara | Galerija slika</title>
+  <meta name="description" content="Zanatska radnja BD - Braća Dobrić. Pružamo sve vrste viljuškarskih usluga. Kontakirajte nas na broj 063/77-09-758">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="img/favicon.ico">
 </head>
 
-<body>
+<body id="galerija">
   <header>
     <div class="header-container">
       <nav class="site-nav">
@@ -19,9 +20,9 @@
           <div class="hamburger"></div>
         </div>
         <ul class="open desktop">
-          <li><a href="index.php#usluge">Usluge</a></li>
-          <li><a href="index.php#kontaktCeo">Kontakt</a></li>
-          <li><a href="galerija.php">Galerija</a></li>
+          <li><a href="index.php">Usluge</a></li>
+          <!-- <li><a href="galerija.html">Galerija</a></li> -->
+          <li><a href="#kontaktinfo">Kontakt</a></li>
         </ul>
       </nav>
       <!--<nav class="navbar navbar-fixed">
@@ -37,55 +38,16 @@
   </nav>-->
     </div>
   </header>
-  <!-- end navbar navbar-fixed-->
-  <hr id="usluge" />
   <div class="container">
-    <div class="odeljak">
-      <div class="sivo">
-        <div class="naslov">
-          <h1 id="usluga">Usluge</h1>
-        </div>
-        <div class="sadrzaj">
-          <p>Bavimo se manipulacijom tereta od 1991. godine. Usluge koje pružamo su:<br/><br/> -istovar mašina<br/> -specijalnih tereta<br/> -paletirane robe<br/> -građevinskih materijala<br/> -pomeranje tereta ručnim alatom (do 10 tona).
-          </p>
-          <p>
-            Sve naše mašine su registrovane i mogu se kretati kroz saobraćaj. <br/> Vršimo usluge na teritorijama opština Surčin, Zemun i Novi Beograd. Za dalji transport potrebna je šlepa.
-          </p>
-        </div>
-      </div>
-      <div class="sivo">
-        <h3 id="viljuskari">Viljuškari kojima raspolažemo</h3>
-        <div class="linijica"></div>
-        <div class="redOpisa">
-          <div class="slika">
-            <img src="img/viljuskar1.jpg" alt="viljuskar">
-          </div>
-          <div class="tekstSlike">
-            <h2>Lancer Boss</h2>
-            <p>Lancer Boss je viljuškar težak 5 tona i pogodan je za dugačke terete poput građa i cevi. Moguće je postaviti i nastavke za vile.</p>
-          </div>
-        </div>
-        <div class="redOpisa">
-          <div class="slika">
-            <img src="img/viljuskar2.jpg" alt="viljuskar">
-          </div>
-          <div class="tekstSlike">
-            <h2>Pobeda 35</h2>
-            <p>Viljuškar Pobeda 35 koji je domaće proizvodnje pogodan je za podizanje manjih tereta i nosivost mu je 4 tone.</p>
-          </div>
-        </div>
-        <div class="redOpisa">
-          <div class="slika">
-            <img src="img/viljuskar3.jpg" alt="viljuskar">
-          </div>
-          <div class="tekstSlike">
-            <h2>Litostroj</h2>
-            <p>Ovaj viljuškar slovenačke marke ima 8 tona i u stanju je da podigne terete do 12 tona.</p>
-          </div>
-        </div>
-      </div>
+    <div class="galleria">
+      <img src="img/viljuskar4.jpg" alt="viljuskar" data-title="Viljuskar 4" data-description="Pobeda 35">
+      <img src="img/viljuskar5.jpg" alt="viljuskar" data-title="Viljuskar 5" data-description="Pobeda 35">
+      <img src="img/viljuskar6.jpg" alt="viljuskar" data-title="Viljuskar 6" data-description="Pobeda 35">
+      <img src="img/viljuskar1.jpg" alt="viljuskar" data-title="Viljuskar 1" data-description="Lancer Boss">
+      <img src="img/viljuskar2.jpg" alt="viljuskar" data-title="Viljuskar 2" data-description="Pobeda 35">
+      <img src="img/DSC00292.JPG" alt="viljuskar" data-title="Braća Dobrić" data-description="Pomeranje peći ručnim alatom">
+      <img src="img/DSC00290.JPG" alt="viljuskar" data-title="Braća Dobrić" data-description="Pomeranje peći ručnim alatom">
     </div>
-    <!-- end odeljak-->
     <div class="odeljak">
       <div class="sivo">
         <div class="naslov">
@@ -119,8 +81,8 @@
             <form name="forma" id="mojaForma" class="kontakt forma" method="post" action="">
               <label class="labela" for="mejl">Mejl adresa</label>
               <input type="text" id="mejl" name="mejlAdresa" class="unos" spellcheck="false">
-              <label class="labela" for="naslovv">Naslov mejla</label>
-              <input type="text" id="naslovv" name="naslov" class="unos" spellcheck="false">
+              <label class="labela" for="naslovMejl">Naslov mejla</label>
+              <input type="text" id="naslovMejl" name="naslov" class="unos" spellcheck="false">
               <label class="labela" for="tekst">Tekst</label>
               <textarea name="tekst" id="tekst" class="unos" spellcheck="false"></textarea>
               <input class="btn" id="btn" type="submit" value="Pošalji">
@@ -135,11 +97,18 @@
   </div>
   <!-- end container-->
 
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
-  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script src="js/validation.js"></script>
   <script src="ajaxMail.js"></script>
+  <script src="galleria/galleria-1.5.7.min.js"></script>
+  <script>
+    (function() {
+      Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+      Galleria.run('.galleria');
+    }());
+  </script>
+
 </body>
 
 </html>

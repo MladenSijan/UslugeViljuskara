@@ -1,13 +1,15 @@
+
+
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular.ttf');
-  src: url('webfont.eot');
+  /*src: url('webfont.eot');
   /* IE9 Compat Modes */
   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
   url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
   url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-  url('webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('webfont.svg#svgFontName') format('svg');
+  url('webfont.ttf') format('truetype') /* Safari, Android, iOS
+  url('webfont.svg#svgFontName') format('svg');*/
   /* Legacy iOS */
 }
 
@@ -19,37 +21,194 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #000;
+  /*background-color: #000;*/
+  background-image:url(../img/kljuc.jpg);
+  background-attachment: fixed;
+}
+
+body#galerija {
+  background-image:url(../img/kljuc2.jpg);
+  background-position: left center;
+}
+
+.dvesta{
+  height:200px !important;
+  background-image:none;
+  background-color:#000;
+  border-bottom:3px solid #f9c118;
+}
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+background-color: #222;
+height:80px;
+z-index:99;
+padding:19px;
+transition: all .5s;
+background-image:url(../img/logo.png);
+background-size:300px;
+background-position: left 50px center;
+background-repeat:no-repeat;
+}
+
+.header-container{
+  width:80%;
+  margin:0 auto;
+
 }
 
 nav {
+
+  margin: 0;
+  padding: 0;
+  width:30%;
+  margin:0 auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  margin-left:-108px;
+}
+
+nav ul.opening {
+  display: inline-block;
+  height: 30px;
+}
+
+nav li { border-bottom: 1px solid #f6f4e2; }
+
+nav li:last-child { border-bottom: none; }
+
+nav a {
+  color: #EBEBD3;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  display: block;
+  padding: 1.5em 4em 1.3em 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:focus { background: #f9c118; }
+
+.site-nav--icon {
+  font-size: 1.4em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgba(255,255,255,.4);
+}
+
+.menu-toggle {
+  position: absolute;
+
+  padding: 0.8em;
+  top: 25px;
+  right: .5em;
+  cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  -webkit-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms;
+}
+
+.hamburger::before {
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+
+.hamburger::after {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+}
+
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before { display: none; }
+
+.open .hamburger::after {
+  -webkit-transform: translateY(-1px) rotate(-90deg);
+  transform: translateY(-1px) rotate(-90deg);
+}
+
+
+ .galleria{
+   max-width: 1000px;
+    height: 600px;
+     background: #000;
+     margin:0 auto;
+     }
+@media (max-width:800px)
+{
+  .galleria{
+    height:400px;
+  }
+}
+@media (max-width:600px)
+{
+  .galleria{
+    height:300px;
+  }
+}
+/*nav {
   display: inline;
 }
 
 .navbar {
-  background-color: #222;
+
   color: #d8d4c9;
   font-size: 20px;
   width: 100%;
   height: auto;
-  padding: 20px;
+
   z-index: 10;
 }
 
-.navbar-fixed {
-  position: fixed;
-  top: 0;
+.navbar ul{
+  margin-top:20px;
 }
 
 .navbar-items {
-  padding: 9.8%;
+  padding-left:9.8%;
   color: #d8d4c9;
   text-decoration: none;
   display: inline;
-  height: auto;
+
+}
+
+.navbar-items ul li a{
+  padding-bottom:2px;
+  border-bottom:1px solid rgba(0,0,0,0);
+}
+
+.nav-items{
+
+  transition:0.2s all;
 }
 
 .navbar-items a {
@@ -60,25 +219,28 @@ nav {
   font-weight: 600;
 }
 
-.navbar-items a:hover {
+.navbar-items ul li a:hover {
   color: #fff;
-  transition: all .2s ease-in-out;
+  border-bottom:1px solid #f9c118;
+  transition: all .2s ;
   -webkit-transition: all .2s ease-in-out;
-  /* Safari 3.1 to 6.0 */
-}
+  /* Safari 3.1 to 6.0
+}*/
 
 div.brand {
-  display: inline-block;
-  margin-right: 40px;
+  position:absolute;
+  z-index:99999;
 }
 
 div.brand a {
   display: inline;
+  text-decoration: none;
   font-size: 25px;
   font-family: 'SportsWorld';
   color: #f9c118;
   letter-spacing: 3px;
   font-weight: 900;
+
   transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
   /* Safari 3.1 to 6.0 */
@@ -88,7 +250,7 @@ div.brand a {
   font-size: 40px;
 }
 
-.nav-items {
+/*.nav-items {
   display: inline-block;
 }
 
@@ -101,7 +263,7 @@ div.brand a {
 
 .kartica {
   float: left;
-  width: 33%;
+  width: 100%;
   height: 450px;
   display: inline-block;
 }
@@ -116,7 +278,7 @@ div.brand a {
   margin: 50px 0;
   padding: 0 10px;
   box-sizing: border-box;
-}
+}*/
 
 .clearfix {
   display: inline-block;
@@ -129,6 +291,44 @@ div.brand a {
   top: -50px;
 }
 
+.kartica .opis {
+  position:static;
+}
+
+.redOpisa{
+  width:100%;
+  clear:both;
+  overflow:auto;
+  margin-bottom:15px;
+  border:1px solid rgba(249,193,24, 0.5);
+  border-top:none;
+  height:auto;
+
+  }
+  .redOpisa .slika{
+    width:40%;
+    float:left;
+    overflow:hidden;
+  }
+  .redOpisa .slika img{
+    width:100%;
+  }
+  .redOpisa .tekstSlike{
+    float:left;
+    width:60%;
+
+  }
+  .redOpisa .tekstSlike h2{
+    background-color: rgba(0,0,0,0.5);
+    width:100%;
+
+  }
+
+#cover{
+  height:100%;
+  background-image:url(../img/viljuskar1.jpg);
+}
+
 #usluge {
   opacity: 0;
 }
@@ -136,16 +336,22 @@ div.brand a {
 .container {
   position: relative;
   top: 60px;
-  background-color: #222;
+
   width: 73%;
   height: auto;
   margin-top: 30px;
-  margin-bottom: 100px;
+
   margin-left: auto;
   margin-right: auto;
   padding: 2.5%;
   min-height: auto;
   border-radius: 6px;
+}
+.sivo{
+   background-color: rgba(34,34,34,0.95);
+   border-radius: 10px;
+   padding:2.5%;
+   margin:15px;
 }
 
 .odeljak {
@@ -160,6 +366,19 @@ div.brand a {
   height: auto;
   text-align: center;
   display: none;
+  position:relative;
+  background-image:url(../img/ikona.png);
+  background-repeat:no-repeat;
+  background-position: right 40%;
+  background-size:25%;
+}
+
+.linijica{
+  width:10%;
+  height:1px;
+  background-color: #f9c118;
+  margin:0 auto;
+  margin-bottom:20px;
 }
 
 h1, h2, h3 {
@@ -167,20 +386,21 @@ h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+/*
   -webkit-touch-callout: none;
-  /* iOS Safari */
+
   -webkit-user-select: none;
-  /* Safari */
+
   -khtml-user-select: none;
-  /* Konqueror HTML */
+
   -moz-user-select: none;
-  /* Firefox */
+
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
+
   user-select: none;
-  /* Non-prefixed version, currently
-     supported by Chrome and Opera */
+
   cursor: default;
+  */
 }
 
 h1 {
@@ -215,29 +435,43 @@ p {
   margin: 50px;
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
+  /*
   -webkit-touch-callout: none;
-  /* iOS Safari */
+
   -webkit-user-select: none;
-  /* Safari */
+
   -khtml-user-select: none;
-  /* Konqueror HTML */
+
   -moz-user-select: none;
-  /* Firefox */
+
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
+
   user-select: none;
-  /* Non-prefixed version, currently
-                          supported by Chrome and Opera */
+
   cursor: default;
+  */
+}
+
+#viljuskari{
+  text-align:center;
+  margin:20px;
 }
 
 .sadrzaj p {
-  text-align: center;
+  text-align: left;
   justify-content: center;
 }
 
+/*.sadrzaj img{
+  filter:none;
+  position:absolute;
+  right:5px;
+  top:75px;
+  width:200px;
+
+}*/
 h3 p {
   color: #f9c118;
   font-size: 30px;
@@ -249,9 +483,14 @@ h3 p {
   height: auto;
 }
 
+.kartica p{
+  display:inline-block;
+  width:45%;
+}
+
 figure {
   display: inline-block;
-  width: 100%;
+  width: 50%;
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -267,25 +506,27 @@ figcaption {
   opacity: 0.7;
 }
 
-img {
+/*img {
   height: auto;
   width: 100%;
   display: inline;
   filter: grayscale(100%);
   border-radius: 3px;
-}
+}*/
 
-img:hover {
+/*img:hover {
   filter: none;
   transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
-  /* Safari 3.1 to 6.0 */
-}
+  /* Safari 3.1 to 6.0
+}*/
+
+
 
 .kontakt {
-  margin-right: 4%;
+
   width: 29%;
-  margin-top: 80px;
+
 }
 
 .kontakt:after {
@@ -406,6 +647,16 @@ textarea {
   -webkit-transition: all .2s ease-in-out;
 }
 
+
+#kontaktCeo{
+
+  border:1px solid #f9c118;
+  border-radius:9px;
+  overflow:auto;
+  padding:30px;
+  margin-bottom:15px;
+}
+
 .kontaktInfo td {
   text-align: left;
   margin-right: 20px;
@@ -439,19 +690,20 @@ div#kontaktinfo table tbody tr td:nth-child(2) {
 }
 
 div#mapa {
+  float:right;
   width: 63%;
 }
 
-iframe {
-  margin-top: 40px;
-}
+
 
 div#kontaktMejl {
   margin-left: auto;
   margin-right: auto;
   clear: both;
-  padding-top: 80px;
-  width: 600px;
+  padding: 60px 60px 30px 60px;
+  width: auto;
+  border:1px solid #f9c118;
+  border-radius:9px;
 }
 
 div#kontaktMejl h3 {
@@ -484,6 +736,7 @@ div#kontaktMejl form input.btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top:30px;
 }
 
 @media screen and (max-width:1440px) {
@@ -495,6 +748,14 @@ div#kontaktMejl form input.btn {
 @media screen and (max-width:1291px) {
   h3 p {
       font-size: 25px;
+  }
+
+  .redOpisa .tekstSlike h2{
+    font-size:28px;
+  }
+  .redOpisa .tekstSlike p{
+    font-size:14px;
+    margin:40px;
   }
 }
 
@@ -532,6 +793,8 @@ div#kontaktMejl form input.btn {
   div#kontaktMejl {
     padding-top: 40px;
   }
+
+
 }
 
 
@@ -548,7 +811,7 @@ div#kontaktMejl form input.btn {
 }
 
 @media screen and (max-width: 1372px) {
-    
+
   div#kontaktinfo {
     display: block;
     margin-left: auto;
@@ -559,7 +822,7 @@ div#kontaktMejl form input.btn {
     display: block;
     text-align: center;
   }
-  
+
   div#kontaktinfo table {
     display: block;
     margin-left: auto;
@@ -574,21 +837,29 @@ div#kontaktMejl form input.btn {
     display: block;
     text-align: center;
   }
-  
+
   .razmak {
     padding-left: 40px;
   }
 }
 
+
+
 @media screen and (max-width:960px) {
   .container {
     width: 80%;
   }
-  
+
+
+
   p {
-    font-size: 20px;
+    font-size: 16px;
   }
-  
+
+  .sadrzaj p{
+    margin:25px;
+  }
+
   .kartica {
     display: block;
     width: 90%;
@@ -611,13 +882,16 @@ div#kontaktMejl form input.btn {
 }
 
 @media screen and (max-width:944px) {
-  figure#slika1 figcaption {
-    padding-bottom: 1px;
-    font-size: 22px;
-  }
+ nav{
+   width:10%;
+ }
+  header{
+      background-position:left 10px center;
+      background-size:200px;
+    }
 }
 
-@media screen and (max-width:910px) {
+@media screen and (max-width:993px) {
   .navbar-items {
     padding: 4.8%;
     font-size: 16px;
@@ -652,9 +926,60 @@ div#kontaktMejl form input.btn {
   div.kartica figure#slika1+p, div.kartica figure#slika2+p {
     font-size: 22px;
   }
+
+  .container{
+    width:90%;
+  }
+   div.brand{
+    margin-right:15px;
+    float:left;
+
+  }
+
+  .navbar ul{
+  margin-top:20px;
+}
+  .navbar ul li {
+    margin-right:9px;
+  }
 }
 
 @media screen and (max-width:775px) {
+
+
+nav{
+  width:1%;
+}
+
+.redOpisa{
+  width:80%;
+  margin:0 auto;
+  margin-bottom:15px;
+}
+ .redOpisa .slika{
+   float:none;
+   width:100%;
+ }
+ .redOpisa .tekstSlike{
+   float:none;
+   width:100%;
+
+ }
+ /*.navbar ul{
+  margin-top:5px;
+}*/
+
+
+
+
+div.brand a{
+  font-size:14px;
+}
+
+/*.nav-items{
+  display:block;
+}*/
+
   .kartica {
     margin-left: 0;
     margin-right: 0;
@@ -666,15 +991,25 @@ div#kontaktMejl form input.btn {
   div.kartica figure#slika1+p, div.kartica figure#slika2+p {
     font-size: 20px;
   }
-   
+
   p {
     margin: 30px;
+  }
+
+  .redOpisa .tekstSlike h2{
+    font-size:24px;
+  }
+
+  .redOpisa .tekstSlike p{
+    text-align: left;
+    font-size: 14px;
+    margin:15px;
   }
 }
 
 @media screen and (max-width:659px) {
     div.container {
-        margin-top: 60px;
+        margin-top: 30px;
     }
     .list-items {
         margin-top: 15px;
@@ -697,24 +1032,68 @@ div#kontaktMejl form input.btn {
   }
 }
 
+@media screen and (min-width:670px){
+   .menu-toggle { display: none; }
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  float:right;
+}
+
+nav li {
+  flex: 1 1 auto;
+  border: none;
+}
+
+nav li a {
+  padding: 1.5em 1.3em 1.3em 1.3em;
+  margin: 0;
+  border: none;
+
+
+}
+
+nav a:hover,  nav a:focus { background-color: rgba(255,255,255,.10); }
+
+.logo {
+  flex: 0 0 200px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+
+}
+}
+
 @media screen and (max-width:639px) {
   /*div.kartica figure#slika1 + p, div.kartica figure#slika2 + p, div.kartica figure#slika3 + p{
     font-size:16px;
     padding:0;
   }*/
-  div.kartica figure {
-    width: 100%;
-    display: block;
-    ;
-    float: none;
-  }
-  div.kartica figure#slika1+p, div.kartica figure#slika2+p, div.kartica figure#slika3+p {
-    display: block;
-    width: 100%;
-    padding: 0 20px;
-    text-align: center;
-    font-size: 20px;
-  }
+
+.sadrzaj{
+  background-image: none;
+}
+
+.header-container{
+  width:100%;
+}
+.container{
+  width:100%;
+}
+
+.redOpisa{
+  width:100%;
+}
+
+
   .odeljak {
     margin-bottom: 0;
   }
@@ -734,13 +1113,31 @@ div#kontaktMejl form input.btn {
   h2 {
    font-size: 27px;
   }
-  
+
   h3 {
     font-size: 23px;
   }
 }
+@media screen and (max-width:560px ) {
 
-@media screen and (max-width:420px /*blaze it*/) {
+  header{
+    height:70px;
+  }
+  table{
+    margin-top:10px;
+  }
+}
+
+
+
+@media screen and (max-width:450px /*blaze it*/) {
+
+
+    header{
+      background-position:left 0 center;
+      background-size:200px;
+    }
+
   h3 {
     font-size: 27px;
   }
@@ -756,43 +1153,55 @@ div#kontaktMejl form input.btn {
   }
   td {
     font-size: 15px;
+
   }
-  
-  .sadrzaj p {
-      justify-content: left;
+  .razmak{
+    padding-left:5px;
   }
-  
+
+
+
+ div#kontaktMejl{
+    padding:60px 10px 30px 10px;
+  }
+
   p {
     font-size: 15px;
     margin: 30px;
   }
-  
-   .kontakt {
-    margin-top: 40px;
-  }
+
+
 }
 
 @media screen and (max-width:386px) {
-  td, .kontaktInfo td  {
-    text-align: center;      
-    display: block;
-  }
+
   #naslov {
     font-size: 27px;
   }
-  
+
   h3 {
     font-size: 23px;
   }
 }
 
-@media screen and (max-width:316px) {
-    div.container {
-        margin-top: 71px;
-    }
-    .list-items li {
-      margin-right: 9px;
-    }
+@media screen and (max-width:326px) {
+  div.container{
+    width:100%;
+    padding:0;
+  }
+  #kontaktCeo{
+    padding:10px;
+  }
+
+  header{
+    padding:10px;
+  }
+
+  .sivo{
+    margin:3px;
+  }
+
+
 }
 
 .errorMessage, .okMessage {
